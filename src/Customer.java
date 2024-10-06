@@ -2,17 +2,17 @@
 public class Customer {
 	private static int counter = 0;
 	
-	private int id;
+	private String id;
 	private Address address;
 	private Phone phone;
 	private String email;
 	
 	
 	Customer() {
-		this.id = counter ++;
+		this.id = Integer.toString(counter ++);
 	}
 	
-	public int getCustomerId() {
+	public String getCustomerId() {
 		return id;
 	}
 	
