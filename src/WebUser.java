@@ -9,11 +9,11 @@ public class WebUser extends Customer{
 			Banned
 	}
 	
-	private int login_id;
+	private String login_id;
 	private String password;
 	private UserState state;
 	
-	WebUser() {
-		this.login_id = id ++;
+	public WebUser() {
+		this.login_id = Integer.toString(id ++);
 	}
 }

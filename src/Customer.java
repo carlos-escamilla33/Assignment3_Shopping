@@ -3,13 +3,19 @@ public class Customer {
 	private static int counter = 0;
 	
 	private String id;
+	private Account account;
 	private Address address;
 	private Phone phone;
 	private String email;
 	
 	
-	Customer() {
+	public Customer() {
 		this.id = Integer.toString(counter ++);
+		this.account = new Account();
+	}
+	
+	public Account getAccount() {
+		return this.account;
 	}
 	
 	public String getCustomerId() {
