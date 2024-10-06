@@ -1,9 +1,10 @@
 
 public class Customer {
 	private static int counter = 0;
+	
 	private int id;
-	private String address;
-	private String phone;
+	private Address address;
+	private Phone phone;
 	private String email;
 	
 	
