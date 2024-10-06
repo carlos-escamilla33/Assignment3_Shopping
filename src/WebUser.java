@@ -1,5 +1,5 @@
 
-public class WebUser {
+public class WebUser extends Customer{
 	private static int id = 0;
 	// enum defined inside the Customer Class
 	public enum UserState {
