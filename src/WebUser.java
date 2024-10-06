@@ -15,5 +15,14 @@ public class WebUser extends Customer{
 	
 	public WebUser() {
 		this.login_id = Integer.toString(id ++);
+		this.state = UserState.Active;
+	}
+	
+	public String getLoginId() {
+		return this.login_id;
+	}
+	
+	public UserState getState() {
+		return this.state;
 	}
 }

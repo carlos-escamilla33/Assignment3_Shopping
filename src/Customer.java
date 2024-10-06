@@ -4,6 +4,7 @@ public class Customer {
 	
 	private String id;
 	private Account account;
+	private WebUser webUser;
 	private Address address;
 	private Phone phone;
 	private String email;
@@ -12,10 +13,25 @@ public class Customer {
 	public Customer() {
 		this.id = Integer.toString(counter ++);
 		this.account = new Account();
+		this.webUser = null;
+	}
+	
+	public Customer(WebUser webUser) {
+		this.id = Integer.toString(counter ++);
+		this.account = new Account();
+		this.webUser = webUser;
 	}
 	
 	public Account getAccount() {
 		return this.account;
+	}
+	
+	public WebUser getWebUser() {
+		return this.webUser;
+	}
+	
+	public void setWebUser(WebUser webUser) {
+		this.webUser = webUser;
 	}
 	
 	public String getCustomerId() {
