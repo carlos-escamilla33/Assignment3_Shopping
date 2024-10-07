@@ -25,6 +25,10 @@ public class Account {
 		return this.billing_address;
 	}
 	
+	public String getId() {
+		return this.id;
+	}
+	
 	public boolean getIsClosed() {
 		return this.is_closed;
 	}
