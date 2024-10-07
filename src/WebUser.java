@@ -1,13 +1,6 @@
 
 public class WebUser extends Customer{
 	private static int id = 0;
-	// enum defined inside the Customer Class
-	public enum UserState {
-			New,
-			Active,
-			Blocked, 
-			Banned
-	}
 	
 	private String login_id;
 	private String password;
@@ -16,6 +9,7 @@ public class WebUser extends Customer{
 	public WebUser() {
 		this.login_id = Integer.toString(id ++);
 		this.state = UserState.Active;
+		this.password = null;
 	}
 	
 	public String getLoginId() {
@@ -24,5 +18,13 @@ public class WebUser extends Customer{
 	
 	public UserState getState() {
 		return this.state;
+	}
+	
+	public void setState(UserState state) {
+		this.state = state;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

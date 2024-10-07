@@ -8,11 +8,17 @@ public class Account {
 	private boolean is_closed;
 	private LocalDate open;
 	private LocalDate closed;
+	private ShoppingCart shoppingCart;
 	
 	public Account() {
 		this.id = Integer.toString(counter ++);
 		this.open = LocalDate.now();
 		this.is_closed = false;
+		this.shoppingCart = new ShoppingCart();
+	}
+	
+	public ShoppingCart getShoppingCart() {
+		return this.shoppingCart;
 	}
 	
 	public Address getBillingAddress() {
